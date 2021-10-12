@@ -11,7 +11,9 @@ Fundamental investing focuses on, well, the fundamentals.  These include how wel
 
 In short, fundamental investing focuses on the intrinsic value of the underlying business and the financial health of the company.  
 
-Once I grasped the difference of philosophies, I realized that some companies are set up to perform better than others, and that there are ways to quantitatively determine which companies these are. Naturally, I wondered how well the stocks of these financially healthy companies performed over time in comparison to the broader market. 
+Once I grasped the difference of philosophies, I realized that some companies are set up to perform better than others, and that there are ways to quantitatively determine which companies these are. Two books were fundamental in shaping that perspective.  One is the seminal value investing book "The Intelligent Investor" by Benjamin Graham, and the other is an updated and simplfied version of the former, called "Rule #1 Investing", by Phil Town. They both introduced me to the theory behind using fundamentals to invest. 
+
+Naturally, I wanted to test that theory in an empirical manner.  I wondered how well the stocks of these financially healthy companies performed over time in comparison to the broader market. 
 
 This project was the perfect opportunity to find that answer.  
 
