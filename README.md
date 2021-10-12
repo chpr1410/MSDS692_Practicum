@@ -1,5 +1,5 @@
 # Overview
-This is the first practicum project for my MS in Data Science.  This project investigates whether fundamentally healthy companies experience better stock market returns than market indexes in general.  Further, I experiment with enhancing this strategy with machine learning methods.
+This is the first practicum project for my M.S. in Data Science program.  This project investigates whether fundamentally healthy companies experience better stock market returns than market indexes in general.  Further, I experiment with enhancing this strategy with machine learning methods.
 # Motivation
 The stock market is a huge part of our economy.  Making money in the market can be a risky proposition and traditionally has been viewed as a realm in which only the Wall Street elites have experienced success.  But in the last few years, many online brokerages have enhanced their technologies and transitioned to zero-commission models, making the stock market more accessible than ever.  
 
