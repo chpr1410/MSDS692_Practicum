@@ -21,7 +21,7 @@ The fundamental data for this project was provided by [QuickFS](https://quickfs.
 
 QuickFS, short for Quick Financial Statements, provides historical balance sheet, income statement, cash flow statement, and financial ratios and other metrics for almost 33,000 companies.  Where applicable, the historic data dates back 20 years into the past.  
 
-<img align="center" style="padding-right:10px;" src='app/static/images/qfs supported cos.jpg' width=300><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/qfs%20supported%20cos.JPG)
 
 QuickFS provides quarterly and annual data for each company.  QuickFS has around 280 metrics available to download per company per period.  I focused on the following 9 metrics:
 
@@ -42,11 +42,11 @@ The total number of observations - the aforementioned metrics for each company f
 # Filtering Process
 Once I had this fundamental data stored in a database, I put each filing date for each company through the following filter:
 
-<img align="center" style="padding-right:10px;" src='app/static/images/healthy co filtering process.jpg' width=500><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/healthy%20co%20filtering%20process.JPG)
 
 Each filing period that makes it through the filter is classified as a "Healthy Company", and stored in a list.  After removing duplicates arising from the quarterly and annual datasets, 619 instances of healthy companies remained.
 
-<img align="center" style="padding-right:10px;" src='app/static/images/healthy cos by year.jpg' width=100><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/healthy%20cos%20by%20year.JPG)
 
 # Pricing Process
 
@@ -63,21 +63,23 @@ For each company and date pair, I downloaded the stock price for the healthy fil
 
 Once I had pricing data, I could finally determine how well these healthy companies performed over time.  The results are encouraging!
 
-<img align="center" style="padding-right:10px;" src='app/static/images/healthy co returns over time.jpg' width=300><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/healthy%20co%20returns%20over%20time.JPG)
 
-Each period is positive and an average annual return of 22.89% for each stock is a very solid return on investment.
+Each period is positive and an average one year return of 22.89% for each stock is a very solid return on investment.
 
 Separating the companies by year allows me to see what performance would have been like over time.  From 2009 to the current period, there are a couple highly positive years, one negative year, and several good years sprinkled in. 
 
-<img align="center" style="padding-right:10px;" src='app/static/images/healthy co returns by year.jpg' width=250><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/healthy%20co%20returns%20by%20year.JPG)
+
 
 ### Comparison to Major Indices
 
 So, how does this strategy of investing in healthy companies compare to the performance of the major indices over time?
 
-The answer is: **quite favorably**.  The table below shows that the strategy has an annual return which is almost double the major indices.  Compounding this over time makes a huge difference.  A dollar invested in this healthy company strategy in 2009 results in a current ending balance 3 to 4 times as large as the same dollar invested in the major indices. 
+The answer is: **quite favorably**.  The table below shows that the strategy has an average annual return that is almost double the major indices.  Compounding this over time makes a huge difference.  A dollar invested in this healthy company strategy in 2009 results in a current ending balance 3 to 4 times as large as the same dollar invested in the major indices. 
 
-<img align="center" style="padding-right:10px;" src='app/static/images/comparing strategy to indices.jpg' width=350><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/comparing%20strategy%20to%20indices.JPG)
+
 
 # Using Machine Learning to Improve the Strategy
 
@@ -89,8 +91,8 @@ To find out, I take the list of healthy companies, download additional financial
 
 I define this machine learning problem as a binary classification one.  Essentially, I separate the results of the healthy companies into two categories, 0s and 1s where:
 
-- **0** = a healthy company that provided an annual return of less than or equal to 10%
-- **1** = a healthy company that provided an annual return of greater than 10%
+- **0** = a healthy company that provided a one year return of less than or equal to 10%
+- **1** = a healthy company that provided a one year return of greater than 10%
  
 
 ### The Data
@@ -125,13 +127,13 @@ Lastly, I created a 2D CNN to analyze the data.  I restructured the input data i
 
 I trained the models and then test them on the test set.  I evaluated each model on accuracy, Area Under the ROC curve, and from the computation of what percent return the strategy would make on the test set compared to what a passive strategy would make. 
 
-<img align="center" style="padding-right:10px;" src='app/static/images/model evaluation scores.jpg' width=500><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/model%20evaluation%20scores.JPG)
 
 The MLP and CNN models have the best evaluations.  They have the highest accuracies and ROC scores, as well as the best strategy returns.  The CNN reached the highest accuracy of 72%.  All the models seem to predict fairly well, especially compared to a random baseline model which in theory, would get close to a 50% accuracy.  Each model also improves on the baseline.  For the test set, the strategy returns are over 20% while the passive, baseline strategy is around 14%.
 
 I further evaluate the models by using confusion matrices.  Here is the summary:
 
-<img align="center" style="padding-right:10px;" src='app/static/images/confusion matrices.jpg' width=500><br>
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/confusion%20matrices.JPG)
 
 These matrices correspond to the close performance of the models above.  The CNN identified the most postive companies, while the MLP identified the most negative. I was curious to look at false positives, though.  Investing in a company that the model says is positive, but turns out to be negative would pose a significant detriment to an investing strategy.  Avoiding these false positives would be a main priority.  The MLP model does this well.
 
@@ -141,11 +143,11 @@ I was pleased to see that following each model's strategy resulted in a higher r
 
 For this project I have introduced sources of fundamental and pricing data for stocks, and how to query the APIs to obtain and store the data.
 
-After defining criteria for a healthy company, I found 619 instances of healthy companies since 2009.  Of those instances, 479 qualified at least a year ago, and therefore have an annual return percentage.  The average one year return percentage for these companies is 22.89%.
+After defining criteria for a healthy company, I found 619 instances of healthy companies since 2009.  Of those instances, 479 qualified at least a year ago, and therefore have a one year return percentage.  The average one year return percentage for these companies is 22.89%.
 
 Then, through separating these healthy companies into their respective years, I have shown that investing in healthy companies over the period of 2009 to the present results in a weighted average one year return of 24.35%.  This return is significantly higher than each of the market indices.  
 
-Finally, I have also shown how to implement machine learning to augment the base strategy.  I found that all the machine learning methods that I applied increased annual returns on average of 8.5%.
+Finally, I have also shown how to implement machine learning to augment the base strategy.  I found that all the machine learning methods that I applied increased average one year returns by 8.5%.
 
 # Further Research Opportunities
 
