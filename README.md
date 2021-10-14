@@ -129,7 +129,7 @@ Lastly, I created a 2D CNN to analyze the data.  I restructured the input data i
 
 I trained the models and then test them on the test set.  I evaluated each model on accuracy, Area Under the ROC curve, and from the computation of what percent return the strategy would make on the test set compared to what a passive strategy would make. 
 
-![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/model%20evaluation%20scores.JPG)
+![Test Image 4](https://github.com/chpr1410/MSDS692_Practicum/blob/main/app/static/images/model%20evaluation%20scores%20-%20updated.JPG)
 
 The MLP and CNN models have the best evaluations.  They have the highest accuracies and ROC scores, as well as the best strategy returns.  The CNN reached the highest accuracy of 72%.  All the models seem to predict fairly well, especially compared to a random baseline model which in theory, would get close to a 50% accuracy.  Each model also improves on the baseline.  For the test set, the strategy returns are over 20% while the passive, baseline strategy is around 14%.
 
